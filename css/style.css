@@ -37,7 +37,7 @@ body {
 }
 .right-half {
     flex: 1;
-    background: url('../images/chair.jpeg') no-repeat center center;
+    background: url('../assets/images/chair.jpeg') no-repeat center center;
     background-size: cover;
 }
 
