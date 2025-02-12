@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@ body {
     transition: background-color 1s ease-in-out; 
 }
 
+/* Landing Page */
 .landing-page {
     width: 100%;
     height: 100vh;
@@ -41,8 +43,7 @@ body {
     transform: scale(1.1);
 }
 
-
-/* Scroll Animation Sections */
+/* Section Styling */
 .section {
     display: flex;
     align-items: center;
@@ -53,44 +54,61 @@ body {
     width: 100%;
 }
 
-/* 2nd Section  */
-.section[data-color="#3b4f1f"] h2 {
-    color: rgb(205, 205, 17); 
-}
-
-.section[data-color="#3b4f1f"] p {
-    color: lightgray; 
-}
-
-/* 3rd Section  */
-.section[data-color="#dcccc1"] h2 {
-    color: rgb(131, 66, 40); 
-}
-
-.section[data-color="#dcccc1"] p {
-    color: rgb(77, 59, 4); 
-}
-
-
-.image img {
-    width: 100%;
-    height: 100vh; /* Make it take full height */
-    object-fit: cover; /* Ensures the image fully covers */
-}
-
-.text {
+/* Text Styling */
+.text, .text-content {
     max-width: 500px;
 }
 
-.text h2 {
+.text h2, .text-content h2 {
     font-size: 24px;
     color: #333;
 }
 
-.text p {
+.text p, .text-content p {
     font-size: 16px;
     color: #555;
+    line-height: 1.6;
 }
+
+/* Image Styling */
+.image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.image-content {
+    display: flex;
+    gap: 10px;
+    flex: 1.5;
+}
+
+.image-box {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+/* Color Customization Per Section */
+.section[data-color="#3b4f1f"] h2 { color: rgb(205, 205, 17); }
+.section[data-color="#3b4f1f"] p { color: lightgray; }
+
+.section[data-color="#dcccc1"] h2 { color: rgb(131, 66, 40); }
+.section[data-color="#dcccc1"] p { color: rgb(77, 59, 4); }
+
+.section[data-color="#0f2652"] h1 { color: rgb(202, 195, 193); }
+.section[data-color="#0f2652"] p { color: rgb(202, 195, 193); }
 
 /* Scroll Animation */
 .fade-in {
@@ -114,3 +132,80 @@ body {
         justify-content: center;
     }
 }
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-content {
+        flex-direction: column;
+    }
+}
+
+/* Furnishing decor */
+.furnishings-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px;
+}
+
+.left-section {
+    display: flex;
+    gap: 20px;
+    flex: 1.5;
+}
+
+.image-box {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+.text-box {
+    background-color: #63564A;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.right-section {
+    flex: 1;
+    padding-left: 50px;
+    color: #2D1F16;
+}
+
+.right-section h1 {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #2D1F16;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.right-section p {
+    font-size: 18px;
+    line-height: 1.8;
+} 

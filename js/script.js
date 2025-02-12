@@ -9,12 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
 
-            // Check if section is in viewport
             if (rect.top < window.innerHeight - 100) {
                 section.classList.add("show");
             }
 
-            // Change background color if section is in center of viewport
             if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
                 currentColor = section.getAttribute("data-color");
             }
