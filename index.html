@@ -16,7 +16,7 @@
             <div class="landing-page">
                 <div class="left-half">
                     <div class="text-container">
-                        WOOD<br> N BEYOND
+                        <h1>WOOD<br> N BEYOND</h1>
                     </div>
                 </div>
                 <div class="image">
@@ -130,5 +130,55 @@
         </section>
 
     </main>
+
+   <div class="footer fade-in" data-color="rgba(232, 227, 220, 255)">
+        <!-- Left Side: Contact & Map -->
+        <div class="contact-map-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>CONTACT US</h2>
+                <p><strong>Call us now</strong></p>
+                <p>+91 89714 75878</p>
+                <p>+91 91643 01731</p>
+                <p><strong>Email us</strong></p>
+                <p>Info@woodnbeyond.in</p>
+                <p>Accounts@woodnbeyond.in</p>
+                <p><strong>Address</strong></p>
+                <p>A1-111, DLF WESTEND HEIGHTS, AKSHAYANAGAR, BEGUR, BANGALORE-560068</p>
+            </div>
+    
+            <!-- Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.512510449339!2d77.6191299735099!3d12.874732089877206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b24c090a01b%3A0xbb12694091fc5339!2sWood%20N%20Beyond!5e0!3m2!1sen!2sin!4v1739382699210!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    
+        <!-- Right Side: Contact Form -->
+        <div class="form-container">
+            <h2>Send us your details</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="602029d3-0910-414f-8400-6652fab56e1c">
+                
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" required placeholder="+91 1234567890">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Your Locality (City / Area)"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
 </body>
 </html>
