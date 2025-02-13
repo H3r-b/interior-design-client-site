@@ -17,7 +17,7 @@ body {
     padding: 0;
 }
 
-/* Sections span full width, no background box */
+/* Sections span full width, with unique colors */
 .section-container {
     width: 100%;
     padding: 50px 5%;
@@ -28,11 +28,30 @@ body {
     transition: background-color 1s ease-in-out;
     position: relative;
     z-index: 1;
+    background-color: var(--section-color, #b19b7d);
 }
 
-/* Background color for each section */
-.section-container[data-color] {
-    background-color: var(--bg-color, #b19b7d);
+/* Assign different colors to sections */
+.section-container:nth-child(odd) {
+    --section-color: #b19b7d;
+}
+.section-container:nth-child(even) {
+    --section-color: #3b4f1f;
+}
+.section-container:nth-child(3) {
+    --section-color: #dcccc1;
+}
+.section-container:nth-child(4) {
+    --section-color: #0f2652;
+}
+.section-container:nth-child(5) {
+    --section-color: #8B7B6D;
+}
+.section-container:nth-child(6) {
+    --section-color: #2D1F16;
+}
+.section-container:nth-child(7) {
+    --section-color: #C4B49A;
 }
 
 /* Universal Image Styling */
@@ -79,7 +98,7 @@ body {
     gap: 15px;
     margin-top: 20px;
     position: relative;
-    z-index: 2; /* Ensures circles are always above the footer */
+    z-index: 2;
 }
 
 /* Circle Features */
@@ -96,11 +115,6 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 12px;
-}
-
-/* Prevent Footer Overlap */
-.section-container:last-of-type {
-    margin-bottom: 150px; /* Adds space before the footer */
 }
 
 /* Scroll Animation */
@@ -142,13 +156,13 @@ body {
     }
 }
 
-/* Footer (Kept exactly as in your original code) */
+/* Footer */
 .footer {
     display: flex;
     width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 0; /* Keep footer behind other sections */
+    z-index: 0;
 }
 
 /* Left Side (Contact Info + Map) */
@@ -199,26 +213,28 @@ body {
     flex-direction: column;
     justify-content: center;
     box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: left;
 }
 
 .form-container h2 {
     font-size: 2.5em;
     margin-bottom: 1em;
     font-weight: 200;
+    text-align: center;
 }
 
-/* Form Styling */
-.form-group {
+.form-container .form-group {
     margin-bottom: 15px;
 }
 
-label {
+.form-container label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-input, textarea {
+.form-container input, .form-container textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -226,7 +242,7 @@ input, textarea {
     font-size: 16px;
 }
 
-button {
+.form-container button {
     background-color: #8B5E3C;
     color: white;
     border: none;
@@ -235,25 +251,9 @@ button {
     cursor: pointer;
     border-radius: 5px;
     width: 100%;
+    margin-top: 10px;
 }
 
-button:hover {
+.form-container button:hover {
     background-color: #6A432B;
-}
-
-/* Responsive Design for Footer */
-@media (max-width: 900px) {
-    .footer {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .contact-map-container, .form-container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .map-container iframe {
-        height: 250px;
-    }
 }
