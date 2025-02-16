@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     transition: background-color 1s ease-in-out;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: #f5f5f5;
     line-height: 1.6;
     padding: 0;
@@ -32,26 +32,35 @@ body {
 }
 
 /* Assign different colors to sections */
-.section-container:nth-child(odd) {
+.section-container:nth-child(odd) { /* Landing*/
     --section-color: #b19b7d;
 }
-.section-container:nth-child(even) {
-    --section-color: #3b4f1f;
+.section-container:nth-child(even) {/* Philosophy*/
+    --section-color: #c7baaa;
 }
-.section-container:nth-child(3) {
-    --section-color: #dcccc1;
+.section-container:nth-child(3) {/* Character */
+    --section-color: #af9b7b;
 }
-.section-container:nth-child(4) {
-    --section-color: #0f2652;
+.section-container:nth-child(4) {/* Harmonious */
+    --section-color: #182454;
 }
-.section-container:nth-child(5) {
-    --section-color: #8B7B6D;
+.section-container:nth-child(5) {/* TEXTURE*/
+    --section-color: #442c20;
 }
-.section-container:nth-child(6) {
-    --section-color: #2D1F16;
+.section-container:nth-child(6) {/* LIGHTING*/
+    --section-color: #181414;
 }
-.section-container:nth-child(7) {
-    --section-color: #C4B49A;
+.section-container:nth-child(7) {/* WHY CHOOSE US?*/
+    --section-color: #e0bb80;
+}
+.section-container:nth-child(8) {/* THE DESIGN PROCESS*/
+    --section-color: #b09c84;
+}
+.section-container:nth-child(9) {/* SERVICES*/
+    --section-color: #716A7C;
+}
+.section-container:nth-child(10) {/* Team*/
+    --section-color: #5b494a;
 }
 
 /* Universal Image Styling */
@@ -81,7 +90,8 @@ body {
 .text-container {
     width: 45%;
     max-width: 500px;
-    text-align: center;
+    text-align: justify;
+    
 }
 
 /* Why Choose Us Section */
@@ -256,4 +266,192 @@ body {
 
 .form-container button:hover {
     background-color: #6A432B;
+}
+
+/* The Team Section */
+.team-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    background-color: #5b494a;
+    color: #E5D5C5;
+}
+
+/* Left Side (Title + CEO Image) */
+.team-left {
+    width: 30%;
+    text-align: left;
+}
+
+.team-left h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Right Side (Founder’s Note + Other Members) */
+.team-right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-note {
+    text-align: justify;
+    font-size: 1.1em;
+    color: #E5D5C5;
+    line-height: 1.6;
+}
+
+.team-note h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Other Team Members */
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.team-members .team-member {
+    width: 45%;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .team-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-left, .team-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #181818;
+    color: #F5F5F5;
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.testimonials-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.testimonials-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 80px; /* Increased space below title */
+    margin-right: 2%;
+}
+
+.testimonials-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px; /* Increased space between paragraphs */
+}
+
+.testimonial {
+    flex: 1;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .testimonials-content {
+        flex-direction: column;
+        gap: 50px; /* Adjust spacing for smaller screens */
+    }
+
+    .testimonial {
+        text-align: left;
+    }
+
+    .testimonial-author {
+        text-align: left;
+    }
+}
+
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 40px;
+    text-align: center;
+}
+
+/* Service Item Styling */
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG Icon Styling */
+.service img {
+    width: 60px;  /* Adjust based on your design */
+    height: auto;
+    filter: brightness(100%);
+}
+
+/* Text Styling */
+.service p {
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Title Styling */
+.text-container h1 {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 5%;
 }
